@@ -22,6 +22,7 @@ E.g.
 - Example
   - Example.html
   - Random.txt
+  
 The example.html will be served as yourwebsite.com/Example.html 
 
 ## The header
