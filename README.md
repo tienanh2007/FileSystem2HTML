@@ -1,45 +1,31 @@
-# ProfessorVishwanathWebsite
-This is a website written using nodejs, express for server code and jquery for client.
+# FileSystem2HTML
 
-## generateHTML.js
-<<<<<<< HEAD
-This file generate HTML files for to serve what is in /public/data folder \n
-=======
-This file generate HTML files for to serve what is in /public/data folder
+A tool to turn your file system into a Miami University personal website
 
->>>>>>> 25ba913b3f5f5ed14a7152d71d75f3a1d26aa464
-The function parameter: gHTML.generateHTML(path, parent);
+## Require software
 
-path: path of the data folder
+Nodejs and git.
 
-parent: always leave empty string
-## generateJS.js
-This file generate JS files for to serve what is in /public/data folder
+## How to Use
 
-The function parameter: gJS.generateJavascript(path);
+1. ```git clone https://github.com/tienanh2007/FileSystem2HTML/edit/master/README.md``` into a folder of your choice
+2. put data in the /public/data folder (data is a folder which contain the file system you want to upload)
+3. In the generateHeader.js, you *have to* specify all the folder you have in an array so that the order can be determine inside the header.
+4. From the FileSystem2HTML folder, run ``` node server.js ```.
+5. Copy everything in public to your MyDisk folder website.
 
-path: path of the data folder
-## generateHeader.js
-This file generate the header which is based on what is in /public/data folder
-## widget.js
-This file generate a widget that randomly pick n pictures and display on the screen
+## Data folder
 
-The function parameter: gWG.generateWidget(path, n, width, height);
+This folder will be a filesystem which will be turned into an html page. For each folder you can have a html file with the same name which will be created as a path to the website.
 
-path: path to the folder contains pictures
+E.g. 
+- Example
+  - Example.html
+  - Random.txt
+The example.html will be served as yourwebsite.com/Example.html 
 
-n: number of pictures
+## The header
 
-width: width of the pictures being display
+One thing special about this project is that it will create a header for your website which will have the same structure as your file system represented as dropdowns. 
 
-height: height of the pictures being display
-
-## server.js
-This run the 3 files above which generate all the needed static file to put on the server.
-
-## How to generate file
-
-1. put data in the /public/data folder (the data is a folder with one html file with the same name that contains all the content. Example in the source code)
-2. In the generateHeader.js, you *have to* specify all the folder you have in an array so that the order can be determine inside the header.
-3. Run server.js which generate all the html files inside /public, all the javascript client files in /public/src.
-4. Copying /public into your MyDisk folder for your website.
+If you want any folder to be include inside the header, you need to include it in generateHeader.js. Then all files and folders inside will be served also.
